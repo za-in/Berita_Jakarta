@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Berita Jakarta - ZVN.News</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff; /* latar belakang putih */
+      color: #000; /* teks hitam */
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 97%;
+      background: #050505; /* header putih */
+      color: #f3eded;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .navbar a {
+      margin-left: 1rem;
+      color: #f3f0f0;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      color: orange
+    }
+
+    .navbar form {
+      display: inline-block;
+      margin-left: 1rem;
+    }
+
+    .navbar input[type="text"] {
+      padding: 0.4rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .navbar button {
+      padding: 0.4rem 0.6rem;
+      border: none;
+      background-color: orange;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .hero {
+      background-image: url('img/latar.jpeg');
+      background-size: cover;
+      background-position: center;
+      height: 400px; /* tinggi gambar diperbesar */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .navbar a[href="Index.html"] {
+  color: orange;
+}
+
+
+    .main-news {
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    .main-news h2 {
+      margin-bottom: 1rem;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .news-card {
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .news-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: orange;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 3px;
+    }
+
+    .vertical-news-list {
+      margin: 2rem;
+    }
+
+    .vertical-card {
+      display: flex;
+      background-color: #1c1c1c;
+      color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+
+    .vertical-card img {
+      width: 220px;
+      object-fit: cover;
+    }
+
+    .vertical-content {
+      padding: 1rem;
+    }
+
+    .vertical-content h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1rem;
+    }
+
+    .vertical-content .category {
+      font-size: 0.85rem;
+      color: orange;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      background: #111;
+      color: #fff;
+      margin-top: 3rem;
+    }
+
+    .footer .social-media {
+      margin-top: 0.5rem;
+    }
+
+    .footer .social-media a {
+      color: #fff;
+      margin: 0 0.5rem;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer .social-media a:hover {
+      color: orange;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">ZVN.NEWS</div>
+    <nav class="navbar">
+      <a href="index.html">Beranda</a>
+      <a href="politik.html">Politik</a>
+      <a href="kesehatan.html">Kesehatan</a>
+      <a href="olahraga.html">Olahraga</a>
+      <form action="search.html" method="get">
+        <input type="text" name="q" placeholder="Cari berita...">
+        <button type="submit">Cari</button>
+      </form>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Berita DKI JAKARTA</h1>
+  </section>
+
+  <!-- Main News Section -->
+  <main class="main-news">
+    <h2>Berita Hari Ini</h2>
+    <div class="news-grid">
+      <div class="news-card">
+        <img src="img/tilang.jpg" alt="Berita1">
+        <p>Ganjil Genap di Jakarta Ditiadakan pada 18 April 2025</p>
+        <a href="berita1.html" class="read-more">Baca Berita ...</a>
+      </div>
+      <div class="news-card">
+        <img src="img/penghargaan.jpeg" alt="Berita2">
+        <p>Pemprov DKI Jakarta Terima Penghargaan Aspek Kinerja Total Tingkat Provinsi</p>
+        <a href="berita2.html" class="read-more">Baca Berita ...</a>
+      </div>
+      <div class="news-card">
+        <img src="img/hut.jpg" alt="Berita3">
+        <p>HUT Ke-78 RI, Pemprov DKI Jakarta Gelar Kemeriahan di Monas</p>
+        <a href="berita3.html" class="read-more">Baca Berita ...</a>
+      </div>
+      <div class="news-card">
+        <img src="img/banjir.jpeg" alt="Berita4">
+        <p>Tinjau Banjir Rob di Muara Angke, Pj Gubernur DKI Jakarta Salurkan Bantuan Bahan Pokok</p>
+        <a href="berita4.html" class="read-more">Baca Berita ...</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Vertical News List -->
+  <section class="vertical-news-list">
+    <div class="vertical-card">
+      <img src="img/sekolah.jpeg" alt="Berita">
+      <div class="vertical-content">
+        <h3>Dukung Makan Bergizi Gratis, Pj. Gubernur Teguh Uji Coba 10.448 Paket Makanan di 12 Sekolah</h3>
+        <p>
+          Presiden Prabowo Subianto dan Wakil Presiden Gibran Rakabuming Raka tengah menguji coba salah satu program andalannya, yaitu Makan Bergizi Gratis (MBG) di sejumlah wilayah. Di Jakarta, uji coba MBG ini berlangsung di 12 sekolah yang turut didampingi Pj. Gubernur Teguh Setyabudi. 
+        </p>
+        <a href="beritav1.html" class="read-more">Baca Berita ...</a>
+      </div>
+    </div>
+
+    <div class="vertical-card">
+      <img src="img/lanjtik.jpeg" alt="Berita">
+      <div class="vertical-content">
+        <h3>Dilantik Jadi Pj. Gubernur Jakarta, Teguh Setyabudi Paparkan Program Prioritasnya</h3>
+        <p>
+          Pj. Gubernur DKI Jakarta Teguh Setyabudi berkomitmen untuk bergerak cepat dan bekerja keras dalam melanjutkan program pembangunan Kota Jakarta menuju kota global. 
+        </p>
+        <a href="beritav2.html" class="read-more">Baca Berita ...</a>
+      </div>
+    </div>
+
+    <div class="vertical-card">
+      <img src="img/gubernur.jpeg" alt="Berita">
+      <div class="vertical-content">
+        <h3>Peran Pj. Gubernur Teguh dalam Kesuksesan Pelantikan Presiden dan Wapres</h3>
+        <p>
+          Pelantikan Presiden Prabowo Subianto dan Wakil Presiden Gibran Rakabuming Raka telah berlangsung dengan sukses di Gedung MPR, Jakarta. Di balik kesuksesan itu, ada peran besar dari Pj. Gubernur Jakarta Teguh Setyabudi. 
+        </p>
+        <a href="beritav3.html" class="read-more">Baca Berita ...</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Zainal Arivin. All rights reserved.</p>
+    <div class="social-media">
+      <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://twitter.com" target="_blank" title="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://tiktok.com" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="https://threads.net" target="_blank" title="Threads"><i class="fab fa-threads"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>
