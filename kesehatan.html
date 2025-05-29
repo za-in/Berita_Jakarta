@@ -10,16 +10,16 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #fff; /* latar belakang putih */
-      color: #000; /* teks hitam */
+      background-color: #fff;
+      color: #000;
     }
 
     .header {
       position: fixed;
       top: 0;
       left: 0;
-      width: 97%;
-      background: #050505; /* header putih */
+      width: 100%;
+      background: #050505;
       color: #f3eded;
       padding: 1rem 2rem;
       display: flex;
@@ -40,8 +40,9 @@
       text-decoration: none;
     }
 
-    .navbar a:hover {
-      color: orange
+    .navbar a:hover,
+    .navbar a.active {
+      color: orange;
     }
 
     .navbar form {
@@ -68,22 +69,17 @@
       background-image: url('img/latar.jpeg');
       background-size: cover;
       background-position: center;
-      height: 400px; /* tinggi gambar diperbesar */
+      height: 400px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       color: white;
+      margin-top: 70px; /* untuk menghindari overlap header */
     }
-
-    .navbar a[href="kesehatan.html"] {
-  color: orange;
-}
-
 
     .main-news {
       padding: 2rem;
-      margin-top: 2rem;
     }
 
     .main-news h2 {
@@ -120,38 +116,6 @@
       border-radius: 3px;
     }
 
-    .vertical-news-list {
-      margin: 2rem;
-    }
-
-    .vertical-card {
-      display: flex;
-      background-color: #1c1c1c;
-      color: white;
-      border-radius: 8px;
-      overflow: hidden;
-      margin-bottom: 1rem;
-    }
-
-    .vertical-card img {
-      width: 220px;
-      object-fit: cover;
-    }
-
-    .vertical-content {
-      padding: 1rem;
-    }
-
-    .vertical-content h3 {
-      margin: 0 0 0.5rem;
-      font-size: 1rem;
-    }
-
-    .vertical-content .category {
-      font-size: 0.85rem;
-      color: orange;
-    }
-
     .footer {
       text-align: center;
       padding: 1rem;
@@ -160,11 +124,11 @@
       margin-top: 3rem;
     }
 
-    .footer .social-media {
+    .social-media {
       margin-top: 0.5rem;
     }
 
-    .footer .social-media a {
+    .social-media a {
       color: #fff;
       margin: 0 0.5rem;
       font-size: 1.2rem;
@@ -172,7 +136,7 @@
       transition: color 0.3s;
     }
 
-    .footer .social-media a:hover {
+    .social-media a:hover {
       color: orange;
     }
   </style>
@@ -185,7 +149,7 @@
     <nav class="navbar">
       <a href="index.html">Beranda</a>
       <a href="politik.html">Politik</a>
-      <a href="kesehatan.html">Kesehatan</a>
+      <a href="kesehatan.html" class="active">Kesehatan</a>
       <a href="olahraga.html">Olahraga</a>
       <form action="search.html" method="get">
         <input type="text" name="q" placeholder="Cari berita...">
@@ -196,102 +160,76 @@
 
   <!-- Hero -->
   <section class="hero">
-    <h1>Berita Kesehatan DKI JAKARTA</h1>
+    <h1>Berita Kesehatan DKI Jakarta</h1>
   </section>
 
-  <!-- Main News Section -->
+  <!-- Main News -->
   <main class="main-news">
     <h2>Berita Hari Ini</h2>
     <div class="news-grid">
+
+      <!-- Ulangi elemen berita ini sesuai kebutuhan -->
       <div class="news-card">
-        <img src="img/forum.jpg" alt="Berita1">
+        <img src="img/forum.jpg" alt="Forum Pra Rapat Kerja Kesehatan Daerah">
         <p>Dinas Kesehatan Provinsi DKI Jakarta Gelar Forum Pra Rapat Kerja Kesehatan Daerah Tahun 2025</p>
         <a href="kesehatan1.html" class="read-more">Baca Berita ...</a>
       </div>
+
       <div class="news-card">
-        <img src="img/kepaladinas.jpg" alt="Berita2">
-        <p>Kepala Dinas Kesehatan DKI Jakarta Dampingi Menteri Kesehatan Tinjau Pelaksanaan Cek Kesehatan Gratis (CKG) Bagi Mitra Driver Online</p>
-        <a href="Kesehatan2.html" class="read-more">Baca Berita ...</a>
+        <img src="img/kepaladinas.jpg" alt="Kepala Dinkes Dampingi Menteri CKG Mitra Driver">
+        <p>Kepala Dinas Kesehatan DKI Jakarta Dampingi Menteri Kesehatan Tinjau Cek Kesehatan Gratis (CKG) untuk Mitra Driver Online</p>
+        <a href="kesehatan2.html" class="read-more">Baca Berita ...</a>
       </div>
+
       <div class="news-card">
-        <img src="img/gedung.jpg" alt="Berita3">
-        <p>Kepala Dinas Kesehatan DKI Jakarta Dampingi Wakil Gubernur DKI Jakarta Resmikan Gedung Puskesmas Pancoran</p>
-        <a href="Kesehatan3.html" class="read-more">Baca Berita ...</a>
+        <img src="img/gedung.jpg" alt="Peresmian Gedung Puskesmas Pancoran">
+        <p>Kepala Dinas Kesehatan DKI Jakarta Dampingi Wakil Gubernur Resmikan Gedung Puskesmas Pancoran</p>
+        <a href="kesehatan3.html" class="read-more">Baca Berita ...</a>
       </div>
+
       <div class="news-card">
-        <img src="img/penilaiaan.jpg" alt="Berita4">
-        <p>Pelaksanaan Penilaian Portofolio dan Pembekalan Calon Peserta Uji Kompetensi berbasis Computer Assisted Test (CAT) Jabatan Fungsional Kesehatan Periode April Tahun 2025</p>
+        <img src="img/penilaiaan.jpg" alt="Penilaian Portofolio dan Pembekalan CAT">
+        <p>Penilaian Portofolio dan Pembekalan CAT untuk Jabatan Fungsional Kesehatan Periode April 2025</p>
         <a href="kesehatan4.html" class="read-more">Baca Berita ...</a>
       </div>
+
       <div class="news-card">
-        <img src="img/monitoring.jpg" alt="Berita1">
-        <p>Dinas Kesehatan Gelar Monitoring PSN dan Lisolisasi Pasca Banjir di RW 01 Kelurahan Rawa Buaya</p>
+        <img src="img/monitoring.jpg" alt="Monitoring PSN dan Lisolisasi Pasca Banjir">
+        <p>Dinas Kesehatan Gelar Monitoring PSN dan Lisolisasi Pasca Banjir di RW 01 Rawa Buaya</p>
         <a href="kesehatan5.html" class="read-more">Baca Berita ...</a>
       </div>
+
       <div class="news-card">
-        <img src="img/banjir.jpeg" alt="Berita2">
+        <img src="img/banjir.jpeg" alt="Dukungan Kesehatan untuk Korban Banjir">
         <p>Dinas Kesehatan Provinsi DKI Jakarta Kerahkan Tim Dukungan Kesehatan untuk Korban Banjir</p>
         <a href="kesehatan6.html" class="read-more">Baca Berita ...</a>
       </div>
+
       <div class="news-card">
-        <img src="img/gizi.jpg" alt="Berita3">
-        <p>Dukung Gizi Seimbang untuk Ibu dan Anak, Kepala Dinas Kesehatan Provinsi DKI Jakarta Dampingi Wakil Gubernur Provinsi DKI Jakarta Hadiri Sarapan Bergizi</p>
+        <img src="img/gizi.jpg" alt="Sarapan Bergizi untuk Ibu dan Anak">
+        <p>Dukung Gizi Seimbang untuk Ibu dan Anak, Kepala Dinas Dampingi Wakil Gubernur Hadiri Sarapan Bergizi</p>
         <a href="kesehatan7.html" class="read-more">Baca Berita ...</a>
       </div>
+
       <div class="news-card">
-        <img src="img/gelar.jpg" alt="Berita4">
-        <p>Dinas Kesehatan Provinsi DKI Jakarta Gelar Entry Meeting Pemeriksaan LKPD TA 2024 Bersama BPK</p>
+        <img src="img/gelar.jpg" alt="Entry Meeting Pemeriksaan LKPD TA 2024">
+        <p>Dinas Kesehatan Gelar Entry Meeting Pemeriksaan LKPD TA 2024 Bersama BPK</p>
         <a href="kesehatan8.html" class="read-more">Baca Berita ...</a>
       </div>
+
     </div>
   </main>
-
-  <!-- Vertical News List
-  <section class="vertical-news-list">
-    <div class="vertical-card">
-      <img src="img/sekolah.jpeg" alt="Berita">
-      <div class="vertical-content">
-        <h3>Dukung Makan Bergizi Gratis, Pj. Gubernur Teguh Uji Coba 10.448 Paket Makanan di 12 Sekolah</h3>
-        <p>
-          Presiden Prabowo Subianto dan Wakil Presiden Gibran Rakabuming Raka tengah menguji coba salah satu program andalannya, yaitu Makan Bergizi Gratis (MBG) di sejumlah wilayah. Di Jakarta, uji coba MBG ini berlangsung di 12 sekolah yang turut didampingi Pj. Gubernur Teguh Setyabudi. 
-        </p>
-        <a href="beritav1.html" class="read-more">Baca Berita ...</a>
-      </div>
-    </div>
-
-    <div class="vertical-card">
-      <img src="img/lanjtik.jpeg" alt="Berita">
-      <div class="vertical-content">
-        <h3>Dilantik Jadi Pj. Gubernur Jakarta, Teguh Setyabudi Paparkan Program Prioritasnya</h3>
-        <p>
-          Pj. Gubernur DKI Jakarta Teguh Setyabudi berkomitmen untuk bergerak cepat dan bekerja keras dalam melanjutkan program pembangunan Kota Jakarta menuju kota global. 
-        </p>
-        <a href="beritav2.html" class="read-more">Baca Berita ...</a>
-      </div>
-    </div>
-
-    <div class="vertical-card">
-      <img src="img/gubernur.jpeg" alt="Berita">
-      <div class="vertical-content">
-        <h3>Peran Pj. Gubernur Teguh dalam Kesuksesan Pelantikan Presiden dan Wapres</h3>
-        <p>
-          Pelantikan Presiden Prabowo Subianto dan Wakil Presiden Gibran Rakabuming Raka telah berlangsung dengan sukses di Gedung MPR, Jakarta. Di balik kesuksesan itu, ada peran besar dari Pj. Gubernur Jakarta Teguh Setyabudi. 
-        </p>
-        <a href="beritav3.html" class="read-more">Baca Berita ...</a>
-      </div>
-    </div>
-  </section> -->
 
   <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 Zainal Arivin. All rights reserved.</p>
     <div class="social-media">
-      <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="https://twitter.com" target="_blank" title="X / Twitter"><i class="fab fa-x-twitter"></i></a>
-      <a href="https://tiktok.com" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-      <a href="https://threads.net" target="_blank" title="Threads"><i class="fab fa-threads"></i></a>
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://threads.net" target="_blank"><i class="fab fa-threads"></i></a>
     </div>
   </footer>
 
