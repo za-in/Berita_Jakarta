@@ -10,16 +10,16 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #fff; /* latar belakang putih */
-      color: #000; /* teks hitam */
+      background-color: #fff;
+      color: #000;
     }
 
     .header {
       position: fixed;
       top: 0;
       left: 0;
-      width: 97%;
-      background: #050505; /* header putih */
+      width: 100%;
+      background: #050505;
       color: #f3eded;
       padding: 1rem 2rem;
       display: flex;
@@ -27,11 +27,27 @@
       align-items: center;
       z-index: 1000;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      flex-wrap: wrap;
     }
 
     .logo {
       font-size: 1.8rem;
       font-weight: bold;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
     .navbar a {
@@ -41,7 +57,7 @@
     }
 
     .navbar a:hover {
-      color: orange
+      color: orange;
     }
 
     .navbar form {
@@ -68,22 +84,21 @@
       background-image: url('img/latar.jpeg');
       background-size: cover;
       background-position: center;
-      height: 400px; /* tinggi gambar diperbesar */
+      height: 400px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       color: white;
+      margin-top: 80px;
     }
 
-    .navbar a[href="Index.html"] {
-  color: orange;
-}
-
+    .navbar a[href="index.html"] {
+      color: orange;
+    }
 
     .main-news {
       padding: 2rem;
-      margin-top: 2rem;
     }
 
     .main-news h2 {
@@ -175,6 +190,66 @@
     .footer .social-media a:hover {
       color: orange;
     }
+
+    /* RESPONSIF untuk layar kecil */
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu-toggle {
+        display: block;
+        margin-left: auto;
+      }
+
+      .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #050505;
+        padding: 1rem 0;
+      }
+
+      .navbar.show {
+        display: flex;
+      }
+
+      .navbar a {
+        margin: 0.5rem 1rem;
+        display: block;
+      }
+
+      .navbar form {
+        padding: 0 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .navbar input[type="text"] {
+        margin-bottom: 0.5rem;
+        width: 100%;
+      }
+
+      .navbar button {
+        width: 100%;
+      }
+
+      .hero {
+        height: 250px;
+        padding: 1rem;
+      }
+
+      .vertical-card {
+        flex-direction: column;
+      }
+
+      .vertical-card img {
+        width: 100%;
+        height: auto;
+      }
+    }
   </style>
 </head>
 <body>
@@ -182,6 +257,7 @@
   <!-- Header -->
   <header class="header">
     <div class="logo">ZVN.NEWS</div>
+    <button class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
     <nav class="navbar">
       <a href="index.html">Beranda</a>
       <a href="politik.html">Politik</a>
@@ -199,7 +275,7 @@
     <h1>Berita DKI JAKARTA</h1>
   </section>
 
-  <!-- Main News Section -->
+  <!-- Main News -->
   <main class="main-news">
     <h2>Berita Hari Ini</h2>
     <div class="news-grid">
@@ -226,7 +302,7 @@
     </div>
   </main>
 
-  <!-- Vertical News List -->
+  <!-- Vertical News -->
   <section class="vertical-news-list">
     <div class="vertical-card">
       <img src="img/sekolah.jpeg" alt="Berita">
