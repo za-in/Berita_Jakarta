@@ -7,27 +7,22 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #fff;
-      color: #000;
+      background-color: #fff; /* latar belakang putih */
+      color: #000; /* teks hitam */
     }
 
     .header {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      background: #050505;
+      width: 97%;
+      background: #050505; /* header putih */
       color: #f3eded;
       padding: 1rem 2rem;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       z-index: 1000;
@@ -37,45 +32,27 @@
     .logo {
       font-size: 1.8rem;
       font-weight: bold;
-      flex: 1 1 100%;
-    }
-
-    .navbar {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: flex-start;
-      width: 100%;
-      margin-top: 0.5rem;
     }
 
     .navbar a {
-      margin: 0.5rem 1rem 0.5rem 0;
+      margin-left: 1rem;
       color: #f3f0f0;
       text-decoration: none;
     }
 
     .navbar a:hover {
-      color: orange;
-    }
-
-    .navbar a[href="politik.html"] {
-      color: orange;
+      color: orange
     }
 
     .navbar form {
-      display: flex;
-      flex-wrap: nowrap;
-      align-items: center;
-      margin-left: auto;
-      margin-top: 0.5rem;
+      display: inline-block;
+      margin-left: 1rem;
     }
 
     .navbar input[type="text"] {
       padding: 0.4rem;
       border-radius: 4px;
       border: 1px solid #ccc;
-      margin-right: 0.5rem;
     }
 
     .navbar button {
@@ -87,43 +64,26 @@
       cursor: pointer;
     }
 
-    @media (min-width: 768px) {
-      .header {
-        flex-wrap: nowrap;
-      }
+    .navbar a[href="politik.html"] {
+  color: orange;
+}
 
-      .logo {
-        flex: 0 0 auto;
-        margin-right: 2rem;
-      }
-
-      .navbar {
-        flex: 1;
-        justify-content: flex-start;
-        margin-top: 0;
-      }
-
-      .navbar form {
-        margin-left: auto;
-        margin-top: 0;
-      }
-    }
 
     .hero {
       background-image: url('img/latar.jpeg');
       background-size: cover;
       background-position: center;
-      height: 400px;
+      height: 400px; /* tinggi gambar diperbesar */
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       color: white;
-      margin-top: 100px;
     }
 
     .main-news {
       padding: 2rem;
+      margin-top: 2rem;
     }
 
     .main-news h2 {
@@ -158,6 +118,38 @@
       color: #fff;
       text-decoration: none;
       border-radius: 3px;
+    }
+
+    .vertical-news-list {
+      margin: 2rem;
+    }
+
+    .vertical-card {
+      display: flex;
+      background-color: #1c1c1c;
+      color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+
+    .vertical-card img {
+      width: 220px;
+      object-fit: cover;
+    }
+
+    .vertical-content {
+      padding: 1rem;
+    }
+
+    .vertical-content h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1rem;
+    }
+
+    .vertical-content .category {
+      font-size: 0.85rem;
+      color: orange;
     }
 
     .footer {
@@ -211,7 +203,6 @@
   <main class="main-news">
     <h2>Berita Hari Ini</h2>
     <div class="news-grid">
-      <!-- Berita -->
       <div class="news-card">
         <img src="img/demo.jpg" alt="Berita1">
         <p>Aksi Kemah Tolak UU TNI di Gedung DPR Kembali Digelar</p>
@@ -219,12 +210,14 @@
       </div>
       <div class="news-card">
         <img src="img/pramono.jpeg" alt="Berita2">
-        <p>Unggul di Quick Count 5 Lembaga Survei, Pramono: Tunggu Finalnya</p>
+        <p>Unggul di Quick Count 5 Lembaga Survei, Pramono: Tunggu Finalnya
+        </p>
         <a href="politik2.html" class="read-more">Baca Berita ...</a>
       </div>
       <div class="news-card">
         <img src="img/ui.jpg" alt="Berita3">
-        <p>IKM UI Gelar Konsolidasi Hari Ini, Bahas Pemangkasan Anggaran hingga Putusan Disertasi Bahlil</p>
+        <p>IKM UI Gelar Konsolidasi Hari Ini, Bahas Pemangkasan Anggaran hingga Putusan Disertasi Bahlil
+        </p>
         <a href="politik3.html" class="read-more">Baca Berita ...</a>
       </div>
       <div class="news-card">
@@ -233,27 +226,63 @@
         <a href="politik4.html" class="read-more">Baca Berita ...</a>
       </div>
       <div class="news-card">
-        <img src="img/tilang.jpg" alt="Berita5">
+        <img src="img/tilang.jpg" alt="Berita1">
         <p>Ganjil Genap di Jakarta Ditiadakan pada 18 April 2025</p>
         <a href="politik5.html" class="read-more">Baca Berita ...</a>
       </div>
       <div class="news-card">
-        <img src="img/penghargaan.jpeg" alt="Berita6">
+        <img src="img/penghargaan.jpeg" alt="Berita2">
         <p>Pemprov DKI Jakarta Terima Penghargaan Aspek Kinerja Total Tingkat Provinsi</p>
         <a href="politik6.html" class="read-more">Baca Berita ...</a>
       </div>
       <div class="news-card">
-        <img src="img/hut.jpg" alt="Berita7">
+        <img src="img/hut.jpg" alt="Berita3">
         <p>HUT Ke-78 RI, Pemprov DKI Jakarta Gelar Kemeriahan di Monas</p>
         <a href="politik7.html" class="read-more">Baca Berita ...</a>
       </div>
       <div class="news-card">
-        <img src="img/banjir.jpeg" alt="Berita8">
+        <img src="img/banjir.jpeg" alt="Berita4">
         <p>Tinjau Banjir Rob di Muara Angke, Pj Gubernur DKI Jakarta Salurkan Bantuan Bahan Pokok</p>
         <a href="politik8.html" class="read-more">Baca Berita ...</a>
       </div>
     </div>
   </main>
+
+  <!-- Vertical News List
+  <section class="vertical-news-list">
+    <div class="vertical-card">
+      <img src="img/sekolah.jpeg" alt="Berita">
+      <div class="vertical-content">
+        <h3>Dukung Makan Bergizi Gratis, Pj. Gubernur Teguh Uji Coba 10.448 Paket Makanan di 12 Sekolah</h3>
+        <p>
+          Presiden Prabowo Subianto dan Wakil Presiden Gibran Rakabuming Raka tengah menguji coba salah satu program andalannya, yaitu Makan Bergizi Gratis (MBG) di sejumlah wilayah. Di Jakarta, uji coba MBG ini berlangsung di 12 sekolah yang turut didampingi Pj. Gubernur Teguh Setyabudi. 
+        </p>
+        <a href="beritav1.html" class="read-more">Baca Berita ...</a>
+      </div>
+    </div>
+
+    <div class="vertical-card">
+      <img src="img/lanjtik.jpeg" alt="Berita">
+      <div class="vertical-content">
+        <h3>Dilantik Jadi Pj. Gubernur Jakarta, Teguh Setyabudi Paparkan Program Prioritasnya</h3>
+        <p>
+          Pj. Gubernur DKI Jakarta Teguh Setyabudi berkomitmen untuk bergerak cepat dan bekerja keras dalam melanjutkan program pembangunan Kota Jakarta menuju kota global. 
+        </p>
+        <a href="beritav2.html" class="read-more">Baca Berita ...</a>
+      </div>
+    </div>
+
+    <div class="vertical-card">
+      <img src="img/gubernur.jpeg" alt="Berita">
+      <div class="vertical-content">
+        <h3>Peran Pj. Gubernur Teguh dalam Kesuksesan Pelantikan Presiden dan Wapres</h3>
+        <p>
+          Pelantikan Presiden Prabowo Subianto dan Wakil Presiden Gibran Rakabuming Raka telah berlangsung dengan sukses di Gedung MPR, Jakarta. Di balik kesuksesan itu, ada peran besar dari Pj. Gubernur Jakarta Teguh Setyabudi. 
+        </p>
+        <a href="beritav3.html" class="read-more">Baca Berita ...</a>
+      </div>
+    </div>
+  </section> -->
 
   <!-- Footer -->
   <footer class="footer">
@@ -270,3 +299,5 @@
 
 </body>
 </html>
+
+revisi codenya seperti yang sama di atas untuk navbar dan responivnya
